@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root 'application#index'
 
+   post '/uffmail/new' => 'uffmail#new'
+   get '/uffmail/new' => 'uffmail#new'
+   get '/uffmail/fail_to_create' => 'uffmail#fail_to_create'
+   get '/uffmail/display_options' => 'uffmail#display_options'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

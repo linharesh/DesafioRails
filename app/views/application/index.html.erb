@@ -1,0 +1,8 @@
+<h1>Sistema para criar uffmail</h1>
+
+<%= form_tag({controller: "uffmail", action: "new"}, method: "post") do %>
+    <%= label_tag(:matricula, 'Matricula do aluno: ') %>
+    <%= text_field_tag(:matricula) %>
+    <%= submit_tag('Criar!') %>
+<% end %>
+

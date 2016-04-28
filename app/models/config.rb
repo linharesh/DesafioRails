@@ -1,3 +1,3 @@
 	module Config
-		PATH = 'alunos.csv'
+		PATH = filename ||= "#{Rails.root}/alunos.csv"
 	end
