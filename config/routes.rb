@@ -5,10 +5,14 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'application#index'
 
+   #resources :uffmail
    post '/uffmail/new' => 'uffmail#new'
    get '/uffmail/new' => 'uffmail#new'
    get '/uffmail/fail_to_create' => 'uffmail#fail_to_create'
    get '/uffmail/display_options' => 'uffmail#display_options'
+   get '/uffmail/create' => 'uffmail#create'
+   post '/uffmail/create' => 'uffmail#create'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -16,6 +16,10 @@ class UffmailController < ApplicationController
 		end
 	end
 
+	def create
+		puts 'CHEGOU AQUI! É DO BRASIL !!!!!'
+	end
+
 	def display_options
 	end
 

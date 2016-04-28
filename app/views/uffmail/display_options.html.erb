@@ -1,1 +1,15 @@
 <h2>Escolha uma opção de UFFMAIL para o aluno <%= @person.name %> </h2>
+
+<br>
+<br>
+
+<%= form_tag 'create' do %>
+<% @options.each do |opt| %>
+    <%= radio_button_tag :opcao, opt %>
+    <%= label_tag :opcao, opt %>
+    <br>
+ <% end %>
+	<%= submit_tag 'Enviar' %>
+<% end %>
+
+ 
