@@ -25,6 +25,7 @@ require_relative 'uffmail'
 		end
 
 		def generate_email_for(person)
+			puts 'WebLauncher # generate_email_for'
 			Uffmail.create(person)
 			
 		end
@@ -36,6 +37,10 @@ require_relative 'uffmail'
 
 		def parser
 			Parser.new(Config::PATH)
+		end
+
+		def get_people
+			parser.parse
 		end
 
 		def finder(people)

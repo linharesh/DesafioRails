@@ -12,6 +12,9 @@ Rails.application.routes.draw do
    get '/uffmail/display_options' => 'uffmail#display_options'
    get '/uffmail/create' => 'uffmail#create'
    post '/uffmail/create' => 'uffmail#create'
+
+
+   get '/alunos/show_all' => 'alunos#show_all'
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

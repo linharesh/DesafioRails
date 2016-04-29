@@ -5,7 +5,7 @@ class Finder
 	end
 
 	def find_by(key, value)
-		collection.find {|item| item[key.to_s] == value} 	
+		collection.find {|item| eval("item.#{key}") == value} 	
 	end
 
 end

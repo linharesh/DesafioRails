@@ -27,7 +27,8 @@
     	end
 
     	def validate_uffmail
-    		valid = @person.active? && !@person.uffmail
+            have_uffmail = @person.uffmail.include?'@id.uff.br'
+    		valid = @person.active? && !have_uffmail
     		@errors << 'Você já tem Uffmail' unless valid
     		valid
     	end

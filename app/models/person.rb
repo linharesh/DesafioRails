@@ -1,13 +1,25 @@
 	class Person
-		attr_reader :matricula, :name, :uffmail, :status
-		def initialize(params)
-			@matricula = params['matricula']
-			@name = params['nome']
-			@status = params['status']
-			@uffmail = params['uffmail']
+		attr_reader :name, :matricula, :telefone, :email, :uffmail, :status
+		
+		def initialize(name, matricula, telefone, email, uffmail, status)
+			@name = name
+			@matricula = matricula
+			@telefone = telefone
+			@email = email
+			@uffmail = uffmail
+			@status = status
 		end
 
 		def active?
-			status == 'Ativo'
+			status.include?'Ativo'
 		end
+
+		def description
+			"Name: #{@name} | Registration: #{@matricula} | Tel: #{@telefone} | Email: #{@email} | Uffmail: #{@uffmail} | Status: #{@status}"
+		end
+
+		def set_uffmail uffmail
+			@uffmail = uffmail
+		end
+
 	end
