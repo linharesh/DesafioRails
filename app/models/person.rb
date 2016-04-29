@@ -7,7 +7,11 @@
 			@telefone = telefone
 			@email = email
 			@uffmail = uffmail
-			@status = status
+			if status.include?'Ativo'
+				@status = 'Ativo'
+			else
+				@status = 'Inativo'
+			end
 		end
 
 		def active?
